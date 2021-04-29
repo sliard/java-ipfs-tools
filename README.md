@@ -46,4 +46,4 @@ My error was to forget to create a merkle DAG with my String. We also need to ad
     Cid.build(0, Cid.Codec.Raw, multiHashData);
     cid = QmT78zSuBmuS4z925WZfrqQ1qHaJ56DQaTfyMUF7F8ff5o
 
-Hope that can help you to better understand IPFS Cid
+Hope that can help you to better understand IPFS Cid.
