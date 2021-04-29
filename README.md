@@ -10,6 +10,7 @@ I was wondering why I couldn't find the same IPFS Cid with my Java code as with 
     Cid helloCid = Cid.build(0, Cid.Codec.Raw, multihashHello);
     cid = QmaozNR7DZHQK1ZcU9p7QdrshMvXqWK6gpu5rmrkPdT3L4
 
+<!-- tsk -->
 
     > echo "hello world" | ipfs add -Q --only-hash
     cid = QmT78zSuBmuS4z925WZfrqQ1qHaJ56DQaTfyMUF7F8ff5o
@@ -39,7 +40,7 @@ My error was to forget to create a merkle DAG with my String. We also need to ad
     ByteArrayOutputStream nodeProtoStream = new ByteArrayOutputStream();
     nodeProto.writeTo(nodeProtoStream);
 
-    // Make a hash SAH256 of Merkledag PBNode
+    // Make a hash SHA256 of Merkledag PBNode
     MessageDigest sha256Digest = MessageDigest.getInstance("SHA-256");
     byte[] nodeHash = sha256Digest.digest(nodeProtoStream.toByteArray());
     Multihash multiHashData = new Multihash(Multihash.Type.sha2_256, nodeHash);
